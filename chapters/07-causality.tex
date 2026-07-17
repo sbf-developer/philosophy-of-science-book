@@ -1,0 +1,220 @@
+\chapter{Causality, Mechanisms, and Complexity}
+\label{ch:causality}
+
+\begin{chapterguide}
+This chapter distinguishes association, intervention, and explanation. It
+introduces potential outcomes, directed acyclic graphs, structural causal
+models, interventionist explanation, mechanisms, and transportability. The
+central claim is that causal knowledge is possible when the inquiry creates or
+locates stable constraints on change, not merely patterns of co-occurrence.
+\end{chapterguide}
+
+Causal claims answer a practical question: what would happen if something were
+changed? A correlation describes how variables vary together. A causal claim
+says that a difference in one variable would produce a difference in another
+under specified conditions. The distinction is not metaphysical decoration.
+Medical treatment, economic policy, education, and climate intervention all
+depend on it.
+
+Causality is difficult because the same association can arise from direct
+causation, common causes, selection, measurement error, feedback, or chance.
+No statistical method can identify a causal interpretation without assumptions
+about design, time, variables, and the process generating the data. But the
+presence of assumptions does not make causal knowledge impossible. It means
+that causal claims should expose the assumptions that make them testable.
+
+\section{Potential outcomes and the missing counterfactual}
+
+The potential-outcomes framework imagines that each unit has an outcome under
+each possible treatment. Let \(Y_i(1)\) be the outcome for unit \(i\) if it
+receives treatment and \(Y_i(0)\) the outcome if it does not. The individual
+causal effect is
+
+\[
+  \tau_i = Y_i(1)-Y_i(0).
+\]
+
+For a given unit, we observe only one of these two potential outcomes. This is
+the fundamental problem of causal inference \citep{rubin1974,holland1986}. A
+randomized experiment solves part of the problem by making treatment assignment
+independent of potential outcomes in expectation. The average difference
+between treatment and control groups can then estimate an average causal
+effect, provided the treatment and outcome are defined and measured properly.
+
+Randomization is not a universal substitute for thought. It may have limited
+external validity, noncompliance, attrition, spillovers, or ethical
+constraints. A trial can estimate what happened under its treatment protocol
+without establishing what would happen under a different dose, population, or
+institution.
+
+\section{Graphs and confounding}
+
+A directed acyclic graph (DAG) represents assumed causal direction. In a
+simple confounding structure, \(C\) affects both treatment \(T\) and outcome
+\(Y\):
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+  node distance=17mm,
+  v/.style={draw=teal,fill=pale,circle,minimum size=8mm,font=\small},
+  ar/.style={-{Latex[length=2mm]},thick,draw=teal}
+]
+\node[v] (c) {\(C\)};
+\node[v,below left=of c] (t) {\(T\)};
+\node[v,below right=of c] (y) {\(Y\)};
+\draw[ar] (c) -- (t);
+\draw[ar] (c) -- (y);
+\draw[ar] (t) -- (y);
+\end{tikzpicture}
+\caption{A confounding graph: \(C\) is a common cause of treatment \(T\) and
+outcome \(Y\). The association between \(T\) and \(Y\) can mix the treatment
+effect with the path through \(C\).}
+\label{fig:confounding}
+\end{figure}
+
+If \(C\) is measured and the graph is credible, conditioning on \(C\) may
+block the back-door path from \(T\) to \(Y\). If \(C\) is unmeasured, researchers
+may need randomization, an instrumental variable, a natural experiment,
+negative controls, sensitivity analysis, or a different design. The graph
+does not prove the causal story. It makes the story visible enough to argue
+about.
+
+Judea Pearl's structural causal models distinguish observation from
+intervention. Informally, \(\Prob(Y\mid T=t)\) describes the outcome among
+cases observed with \(T=t\), whereas \(\Prob(Y\mid \doop(T=t))\) describes what
+would happen if \(T\) were set to \(t\) by an intervention that removes the
+usual causes of treatment \citep{pearl2009}. The distinction explains why an
+association can fail to answer a policy question.
+
+\section{Bayesian reasoning about causal claims}
+
+Bayesian reasoning can represent uncertainty about causal hypotheses. Suppose
+\(H_1\) says a treatment has a positive effect and \(H_0\) says it has no effect.
+The evidence \(E\) changes their odds according to
+
+\[
+  \frac{\Prob(H_1\mid E)}{\Prob(H_0\mid E)}
+  =
+  \frac{\Prob(E\mid H_1)}{\Prob(E\mid H_0)}
+  \times
+  \frac{\Prob(H_1)}{\Prob(H_0)}.
+\]
+
+The first ratio is the likelihood ratio: how much more expected the evidence
+is under \(H_1\) than \(H_0\). The second ratio expresses prior odds. A strong
+randomized design can make the likelihood ratio informative by reducing
+confounding. A weak observational design may produce a large apparent effect
+while leaving several causal models compatible with the data.
+
+The equation does not remove causal assumptions. It shows where they enter. A
+prior may encode background knowledge about mechanisms. The likelihood depends
+on the measurement model, treatment assignment, missingness, and outcome
+definition. Good causal inference therefore combines probability with design
+and mechanism.
+
+\section{Interventionist explanation}
+
+James Woodward treats causal explanation in terms of stable relations under
+interventions \citep{woodward2003}. A variable \(X\) explains a change in \(Y\)
+when manipulating \(X\), while holding relevant background conditions fixed,
+changes \(Y\) according to a relationship that is stable enough to support
+counterfactual reasoning.
+
+This account improves on correlation, but the phrase \enquote{holding fixed}
+hides complexity. In a biological system, manipulating one gene may alter many
+pathways. In an economy, changing interest rates can trigger expectations and
+institutional responses. In a social setting, an intervention can change the
+meaning of the variable itself.
+
+\RCR\ therefore adds an \emph{intervention boundary}: a causal claim must state
+which variables are changed, which processes are allowed to respond, and which
+background conditions are treated as fixed. A causal law is not a universal
+promise that every intervention works identically. It is a scope-bound
+constraint on a family of interventions.
+
+\section{Mechanisms and causal structure}
+
+Mechanistic explanations describe parts, activities, organization, and the
+way their interactions produce a phenomenon. A mechanism is not merely a list
+of correlations. It explains how a change propagates through a system.
+
+Mechanistic evidence is especially valuable when it connects different scales.
+A drug may bind to a receptor, alter a signaling pathway, change cell behavior,
+and improve a clinical outcome. Each link can fail independently. The
+mechanistic story is stronger when it is supported by intervention and
+measurement at several links rather than inferred from the final outcome alone.
+
+Mechanisms are not always microscopic. A market institution, a school
+organization, or a legal procedure can be a mechanism when its parts and rules
+produce a stable social outcome. The relevant parts may be persons, norms,
+resources, and sanctions rather than molecules.
+
+\section{Complexity, feedback, and nonlinearity}
+
+Complex systems create three challenges for causal inference.
+
+First, effects can be nonlinear. A small change may have little effect below a
+threshold and a large effect above it. A linear average can conceal this
+structure.
+
+Second, systems can contain feedback. Treatment changes behaviour; behaviour
+changes treatment exposure; the outcome changes future measurement. A static
+DAG may need to be expanded into a time-indexed graph.
+
+Third, many causes can interact. The effect of an intervention may depend on
+context, history, and network position. The average treatment effect can be
+scientifically useful while failing to describe any particular subgroup.
+
+These challenges do not defeat objectivity. They make \emph{transportability}
+and \emph{heterogeneity} central. A result should be carried to a new setting
+only after checking which mechanisms, distributions, and institutional
+conditions are shared.
+
+\begin{principlebox}
+\textbf{Causal constraint principle.} A causal claim is objective to the degree
+that it identifies a stable change-relation supported by design, measurement,
+mechanism, or convergent intervention. The claim must state its intervention
+boundary and the conditions under which the relation is expected to travel.
+\end{principlebox}
+
+\section{What causal knowledge does not require}
+
+Causal knowledge does not require deterministic laws. An intervention can
+change a probability distribution without fixing an individual outcome. Nor
+does causal knowledge require a single metaphysical definition of cause.
+Different sciences may use manipulation, process transmission, counterfactual
+dependence, or mechanism construction as complementary modes.
+
+Causal knowledge also does not require the elimination of all uncertainty. It
+requires that the uncertainty be attached to a specified causal question. A
+claim such as \enquote{this policy works} is too vague. A claim such as \enquote{for
+schools with these resources, under this implementation, assignment to this
+programme increases average attendance over one year by an estimated range} is
+criticizable and therefore epistemically useful.
+
+\section*{Chapter summary}
+
+Correlation records association; causal inference concerns changes under
+intervention. Potential outcomes clarify the missing counterfactual, DAGs make
+confounding assumptions visible, and structural causal models distinguish
+observation from intervention. Mechanisms explain how effects are produced.
+Complexity requires attention to nonlinearity, feedback, heterogeneity, and
+transportability. \RCR\ treats causal objectivity as the stabilization of
+change-relations under explicit intervention boundaries.
+
+\begin{discussion}
+\begin{enumerate}
+\item Can a randomized trial establish a causal effect if treatment changes
+the outcome measure?
+\item When is a mechanism more informative than a highly predictive model?
+\item How should a causal claim be reported when its average effect hides
+opposite effects in subgroups?
+\end{enumerate}
+\end{discussion}
+
+\begin{furtherreading}
+See Rubin (1974), Holland (1986), Pearl (2009), Woodward (2003), Hernan and
+Robins (2020), Salmon (1984), and Craver (2007).
+\end{furtherreading}
+

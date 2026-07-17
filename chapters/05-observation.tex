@@ -1,0 +1,227 @@
+\chapter{Observation, Measurement, and the Making of Data}
+\label{ch:observation}
+
+\begin{chapterguide}
+This chapter examines how observations become data. It argues that theory
+ladenness does not make observation arbitrary. Instead, objectivity depends on
+a traceable measurement path, calibrated instruments, controlled sources of
+error, and the convergence of distinct ways of making the target answer.
+\end{chapterguide}
+
+A datum is not a small piece of reality waiting to be collected. It is the
+result of an interaction between a target, an instrument, a procedure, a
+record, and an interpretive model. The fact that data are made does not mean
+that they are made up. A footprint is produced by a foot and a surface, but
+the scientific significance of the footprint depends on a method of reading
+it.
+
+This point matters because scientific disputes often focus on whether an
+observation is theory-laden. The correct answer is yes: observations rely on
+concepts and instruments. But the conclusion that observations are therefore
+subjective does not follow. A map is concept-laden and can still be constrained
+by terrain. The relevant question is whether the concepts and instruments are
+arranged so that the result can resist convenient reinterpretation.
+
+\section{Theory-ladenness without observational chaos}
+
+Norwood Hanson and later philosophers emphasized that what a scientist sees
+depends on training and expectation. A radiologist and a novice may look at
+the same image and notice different patterns. A physicist sees a detector event
+as evidence of a particle only within a theoretical and instrumental context.
+Wilfrid Sellars argued that the \enquote{given} is not a self-interpreting
+foundation of knowledge \citep{sellars1963}.
+
+The strongest lesson is semantic and inferential. There is no observation
+sentence whose meaning is entirely independent of all concepts. The novice and
+the expert do not occupy identical epistemic positions. But the existence of
+different interpretations also creates a testable difference. An expert's
+interpretation can be assessed by calibration, successful prediction,
+independent readings, and the ability to distinguish real signals from
+artifacts.
+
+Theory-ladenness has two directions. Theory guides attention and helps design
+instruments. Evidence also disciplines theory by exposing predictions that
+fail, measurements that do not replicate, and interventions that produce
+unexpected effects. The relation is therefore reciprocal rather than one-way.
+
+\section{The measurement path}
+
+To evaluate a measurement, \RCR\ asks for a path from target to claim:
+
+\begin{enumerate}
+\item \textbf{Target:} What property, event, or process is being measured?
+\item \textbf{Interaction:} How does the target affect the instrument or
+observer?
+\item \textbf{Calibration:} How is the instrument's response related to a
+standard or independently measured quantity?
+\item \textbf{Transformation:} What mathematical or computational operations
+turn the raw signal into a reported value?
+\item \textbf{Error model:} Which systematic and random errors could distort
+the result?
+\item \textbf{Interpretation:} What claim is the result taken to support, and
+what background assumptions connect it to the target?
+\end{enumerate}
+
+This path is not a demand that every measurement be philosophically
+reconstructed from scratch. It is a practical test of where objectivity could
+fail. A value can be precise but invalid if it measures the wrong construct. A
+survey can be representative but biased by nonresponse. A detector can be
+sensitive but unable to distinguish signal from background. A psychological
+scale can be reliable across repeated administrations while failing to measure
+the concept its label suggests.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+  node distance=6mm and 8mm,
+  box/.style={draw=linegray,rounded corners=2pt,fill=pale,align=center,minimum width=2.55cm,minimum height=0.72cm,font=\small},
+  arrow/.style={-{Latex[length=2mm]},draw=teal,thick}
+]
+\node[box] (target) {Target property\\or event};
+\node[box,right=of target] (interaction) {Physical or social\\interaction};
+\node[box,right=of interaction] (instrument) {Instrument and\\calibration};
+\node[box,below=of instrument] (transform) {Data processing\\and error model};
+\node[box,left=of transform] (result) {Reported\\result};
+\draw[arrow] (target) -- (interaction);
+\draw[arrow] (interaction) -- (instrument);
+\draw[arrow] (instrument) -- (transform);
+\draw[arrow] (transform) -- (result);
+\end{tikzpicture}
+\caption{A measurement path. Every arrow is a potential site of error and
+also a site where independent validation can be added.}
+\label{fig:measurement-path}
+\end{figure}
+
+\section{Operationalism and construct validity}
+
+Operationalism insists that a concept should be defined by an operation. The
+view has a useful corrective: a definition that cannot guide any procedure is
+not yet an empirical concept. But one concept may have several legitimate
+operations. Temperature can be measured through expansion, resistance,
+radiation, or thermodynamic relations. Intelligence, poverty, and social trust
+also admit multiple operationalizations.
+
+An operation is therefore not identical to a definition. It is an instrument
+for producing evidence about a construct under conditions. Convergent
+measurement asks whether different operations agree when they should.
+Discriminant measurement asks whether they remain distinct from neighboring
+constructs. Known-group tests ask whether a measure behaves differently in
+groups that the theory says should differ. These tests do not eliminate
+interpretation, but they distribute it across independent routes.
+
+\section{From data to phenomena}
+
+James Bogen and James Woodward distinguished data from phenomena
+\citep{bogenwoodward1988}. Data are local, often noisy records: a set of
+instrument readings, images, or observations. Phenomena are stable patterns
+that data reveal through analysis, replication, and background knowledge. The
+distinction explains why a single observation can be weak evidence while a
+robust phenomenon can support a theory.
+
+For example, a particular climate station reading may be affected by
+instrument placement, urbanization, or missing values. A long-run warming
+pattern is not simply one more reading; it is a phenomenon supported by many
+records, corrections, physical mechanisms, and independent indicators. A
+single detector event may be ambiguous, while a distribution of events with a
+predicted energy relation is a phenomenon.
+
+The distinction also protects against two errors. Data are not automatically
+theory-free facts, but phenomena are not inventions of a theory. A phenomenon
+is a stabilized pattern that remains identifiable when the routes to it are
+varied and criticism is allowed to operate.
+
+\section{Error, uncertainty, and precision}
+
+Precision concerns the spread of repeated measurements. Accuracy concerns
+closeness to the target value. A measurement can be precise but systematically
+wrong. A model can estimate a tiny standard error because it ignores a major
+source of uncertainty. A survey can report many decimal places while its
+conceptual validity is poor.
+
+\RCR\ distinguishes three forms of uncertainty.
+
+\begin{itemize}
+\item \textbf{Aleatory uncertainty} concerns variation in a process or outcome
+that is treated as stochastic for the purpose of analysis.
+\item \textbf{Epistemic uncertainty} concerns limited knowledge of parameters,
+models, initial conditions, or measurement error.
+\item \textbf{Scope uncertainty} concerns whether a result transfers to a
+different population, scale, time, or institutional setting.
+\end{itemize}
+
+The distinction is not merely terminological. More observations may reduce
+sampling uncertainty but do little to correct a biased measurement. A larger
+sample may make a misleading operational definition more precise. A model
+ensemble may explore parameter uncertainty while leaving structural uncertainty
+untouched.
+
+\section{Instrumental realism}
+
+Ian Hacking's emphasis on experimentation suggests a useful form of realism:
+instruments can create a stable relation between a target and an effect. But
+instrumental success must be unpacked. A detector's output can be used to
+control a beam, diagnose a condition, or produce a new phenomenon. The stronger
+the independence between the instrument's construction and the claim being
+tested, the stronger the resulting support.
+
+One should ask:
+
+\begin{enumerate}
+\item Can the result be reproduced with a different instrument principle?
+\item Can the calibration be checked against an independent standard?
+\item Does the target support interventions that were not used to define it?
+\item Do failed attempts reveal a boundary rather than disappear through
+post hoc interpretation?
+\end{enumerate}
+
+This standard is demanding but not impossible. It is common in metrology,
+particle physics, medicine, and engineering. In social research, the analogous
+tests may involve alternative measures, preregistered coding, blinded
+assessment, administrative records, or natural experiments.
+
+\section{Observation in the social sciences}
+
+Social categories present a special issue because measurement can change the
+thing measured. A census category can become an administrative identity. A
+test score can alter self-perception. A policy indicator can become a target
+that organizations optimize. This does not make the category unreal, but it
+means that the measurement relation is reflexive.
+
+\begin{principlebox}
+\textbf{Reflexive measurement principle.} When the act of classification can
+change behaviour, the measurement path must include feedback from the
+classification to the target. Objectivity requires reporting that feedback,
+not pretending that the target is static.
+\end{principlebox}
+
+Reflexive measurement is one reason why social science needs both causal
+models and institutional analysis. A variable can be a real social fact
+because people and organizations act on it, while its meaning and effects
+depend on rules that can change.
+
+\section*{Chapter summary}
+
+Observation is conceptually mediated but not arbitrary. A measurement becomes
+objective to the extent that its path from target to reported result is
+traceable, calibrated, error-aware, and open to independent checks. Data are
+local records; phenomena are stabilized patterns that survive analysis and
+replication. Precision does not guarantee validity, and social measurements
+require attention to feedback. Theory and evidence constrain one another
+through carefully designed measurement paths.
+
+\begin{discussion}
+\begin{enumerate}
+\item Which is more dangerous in a measurement: random noise, systematic bias,
+or a construct that is poorly defined?
+\item Can two measurements of the same construct legitimately disagree?
+\item How should a researcher report a result when the target changes in
+response to being measured?
+\end{enumerate}
+\end{discussion}
+
+\begin{furtherreading}
+See Hacking (1983) on experiment and intervention, Bogen and Woodward (1988)
+on data and phenomena, Sellars (1963) on the critique of the given, and
+Frigg and Hartmann (2006) for models and measurement in scientific practice.
+\end{furtherreading}
+

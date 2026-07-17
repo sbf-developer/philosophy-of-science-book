@@ -1,0 +1,269 @@
+\chapter{The Epistemology of Reflexive Constraint Realism}
+\label{ch:epistemology}
+
+\begin{chapterguide}
+This chapter gives \RCR\ an epistemology. It defines evidence, states
+inferential rules, explains how belief should change, and proposes criteria for
+comparing theories. The framework does not replace Bayesian, causal,
+experimental, or interpretive methods; it specifies how their results can be
+assembled into an objective but fallible claim.
+\end{chapterguide}
+
+The ontological claim that reality constrains inquiry is not enough. A world can
+be real while our beliefs about it are systematically wrong. \RCR's
+epistemology therefore asks how constraints become reasons. A reason is not
+simply an event that occurs before belief. It is evidence when the event
+discriminates among claims under a defensible measurement and inferential
+model.
+
+\section{Claims, targets, and alternatives}
+
+Every scientific claim should be represented with five fields:
+
+\begin{enumerate}
+\item \textbf{Target:} the entity, process, relation, or population at issue;
+\item \textbf{content:} what is being asserted about the target;
+\item \textbf{scope:} the time, place, scale, population, and intervention
+conditions;
+\item \textbf{alternatives:} rival explanations or models;
+\item \textbf{warrant:} the evidence and reasoning supporting the claim.
+\end{enumerate}
+
+A sentence such as \enquote{\(X\) causes \(Y\)} is incomplete. It does not say
+which \(X\), which \(Y\), in what population, by what intervention, or against
+which confounders. A scoped claim can be tested. A vague claim can survive by
+changing its meaning.
+
+\section{Evidence as constraint}
+
+Evidence \(E\) supports a claim \(H\) when \(E\) is more expected under \(H\)
+than under relevant alternatives, or when \(E\) forces a revision of those
+alternatives. The Bayesian expression is the likelihood ratio:
+
+\[
+  \operatorname{LR}(E;H_1,H_0)
+  =
+  \frac{\Prob(E\mid H_1)}{\Prob(E\mid H_0)}.
+\]
+
+A likelihood ratio greater than one favours \(H_1\) over \(H_0\); a ratio less
+than one favours \(H_0\). The ratio does not establish either hypothesis as
+true. It measures the evidential direction and strength relative to a model.
+
+In practice, \(\Prob(E\mid H)\) includes assumptions about sampling,
+measurement, missingness, and analysis. \RCR\ therefore requires that the
+evidence statement carry its measurement path and scope conditions with it.
+
+\begin{principlebox}
+\textbf{Evidence rule.} Do not ask whether a result is evidence in isolation.
+Ask: evidence for which claim, against which alternative, under which
+measurement path, and with what expected error if the claim were false?
+\end{principlebox}
+
+\section{The inferential rules}
+
+The following rules are the operational core of \RCR. They are norms for
+reasoning, not algorithms that mechanically settle every case.
+
+\begin{enumerate}[label=\textbf{R\arabic*.}]
+\item \textbf{Scope before strength.} State the claim's target and scope before
+assigning confidence. A highly precise claim with an undefined target has
+little epistemic content.
+\item \textbf{Path traceability.} Trace the path from target to datum to
+conclusion. Separate observation, transformation, model assumption, and
+interpretation.
+\item \textbf{Alternative exposure.} Compare a claim with serious alternatives.
+A result that fits \(H\) but also fits many rivals has limited discriminating
+force.
+\item \textbf{Risk preference.} Prefer tests that create outcomes likely to
+differ across hypotheses. Confirmation is stronger when the test was not
+designed to guarantee success.
+\item \textbf{Invariance search.} Vary observers, instruments, operational
+definitions, samples, models, or interventions where the claim says the
+result should remain stable.
+\item \textbf{Causal separation.} Do not infer causal adequacy from predictive
+fit alone. Require design, intervention, mechanism, or a clearly defended
+counterfactual model.
+\item \textbf{Transport discipline.} Do not move a result to a new setting
+without identifying shared mechanisms and checking changed distributions.
+\item \textbf{Commitment proportionality.} Match ontological commitment to the
+strongest layer of evidence actually established.
+\item \textbf{Revision readiness.} State what evidence would lower confidence or
+change the model. A claim insulated from revision is not strengthened by
+confidence.
+\item \textbf{Social accountability.} Treat competent, relevant criticism as a
+source of information about hidden assumptions, not merely as a political
+obstacle.
+\end{enumerate}
+
+The rules can conflict. A high-risk test may be unethical. An exact replication
+may be impossible. A new operationalization may alter the target. In such
+cases, the conflict should be reported rather than hidden. \RCR\ is a framework
+for making trade-offs visible, not a claim that every trade-off has one
+correct answer.
+
+\section{Belief revision}
+
+Belief revision should be continuous, comparative, and calibrated. Continuous
+does not mean that all beliefs must be represented by exact numbers. It means
+that the language of confidence should reflect degrees of support. Comparative
+means that confidence in one claim depends on how it performs against
+alternatives. Calibrated means that predictions are checked against outcomes.
+
+A useful reporting format separates:
+
+\begin{itemize}
+\item prior background assumptions;
+\item new evidence;
+\item the likelihood or expected error under each alternative;
+\item the updated confidence;
+\item remaining uncertainty and scope limitations.
+\end{itemize}
+
+This format is compatible with Bayesian updating, confidence intervals,
+likelihoodist reasoning, error statistics, or qualitative comparative
+inference. The common requirement is that the route from evidence to belief be
+auditable.
+
+\section{Theory comparison}
+
+Theories should not be ranked by one virtue alone. A simple theory can be too
+simple. A detailed theory can overfit. A highly predictive theory can lack a
+causal mechanism. A metaphysically rich theory can make no risky difference.
+
+\RCR\ proposes a comparative profile with seven dimensions:
+
+\begin{enumerate}
+\item empirical fit to established phenomena;
+\item novel or risky success;
+\item structural and causal coherence;
+\item robustness under independent changes;
+\item explanatory reach and integration;
+\item simplicity relative to scope and complexity;
+\item transparency, corrigibility, and transportability.
+\end{enumerate}
+
+For an informal representation, let a theory \(T\) have profile
+\[
+  \mathbf{V}(T) =
+  (F,N,C,R,X,S,O),
+\]
+where the letters stand for fit, novelty, coherence, robustness, explanatory
+reach, simplicity, and objectivity of process. The profile is not a single
+score. In some decisions one dimension can dominate: a medical treatment may
+require safety even if its explanatory theory is incomplete. In others,
+structural coherence or novel prediction may matter more.
+
+A weighted score can be used when a purpose requires one:
+\[
+  Q(T) = \sum_{j=1}^{7} w_j V_j(T),
+  \qquad
+  w_j \geq 0,\quad \sum_{j=1}^{7}w_j=1.
+\]
+Here \(w_j\) are explicit weights chosen for a stated purpose. The equation
+does not create objectivity by arithmetic. It prevents hidden trade-offs from
+masquerading as neutral judgment.
+
+\begin{table}[ht]
+\centering
+\smalltable
+\begin{tabularx}{\textwidth}{p{0.22\textwidth}Y Y}
+\toprule
+Dimension & Strong performance & Typical warning sign\\
+\midrule
+Fit & Accounts for reliable phenomena within error & Selective use of data\\
+Novelty & Predicts or reveals outcomes not used to tune the theory & Post hoc accommodation\\
+Coherence & Links mechanisms, equations, and concepts without contradiction & Ad hoc patches\\
+Robustness & Survives instruments, samples, and model changes & Fragility to one pipeline\\
+Reach & Connects domains or scales with clear bridges & Vague unification\\
+Simplicity & Achieves scope without needless complexity & Underfitting or oversimplification\\
+Process objectivity & Makes criticism and revision possible & Opaque methods or status protection\\
+\bottomrule
+\end{tabularx}
+\caption{A comparative profile for theory choice. No dimension is sufficient on
+its own.}
+\label{tab:theory-profile}
+\end{table}
+
+\section{Explanation and evidence are distinct}
+
+A theory may explain a phenomenon but fit data poorly because the measurements
+are noisy. A statistical model may fit and predict accurately without
+identifying the mechanism. A mechanism may be true while a quantitative
+parameter is wrong. \RCR\ avoids forcing these into one score by reporting
+separate warrants.
+
+This distinction is also useful for scientific communication. A paper should
+not describe an associational analysis as a causal explanation merely because
+the proposed story is plausible. It should not describe a computational
+possibility as an empirical prediction until the bridge to the target is
+identified. It should not describe a normatively preferred outcome as a
+scientific conclusion without separating values from evidence.
+
+\section{Objectivity criteria}
+
+A claim qualifies as objective in the \RCR\ sense when it satisfies the
+following criteria to a degree appropriate to its field:
+
+\begin{enumerate}
+\item \textbf{World resistance:} the claim confronts effects that investigators
+cannot freely choose.
+\item \textbf{Cross-perspective convergence:} relevantly different observers or
+methods identify the same pattern.
+\item \textbf{Measurement accountability:} the path from target to result is
+traceable and error-aware.
+\item \textbf{Intervention or counterfactual grip:} the claim supports a
+well-defined change relation where one is possible.
+\item \textbf{Model transparency:} idealizations and bridge assumptions are
+stated.
+\item \textbf{Critical independence:} competent others can inspect and challenge
+the claim.
+\item \textbf{Scope honesty:} the claim does not travel further than its
+evidence.
+\item \textbf{Revision capacity:} the inquiry can detect and incorporate error.
+\end{enumerate}
+
+These criteria are not a checklist that produces certainty. They are dimensions
+along which a research system can improve. A claim may score strongly on
+measurement and weakly on intervention because the target is historical. It may
+score strongly on causal grip and weakly on transport because the setting is
+unique.
+
+\section{What makes the epistemology reflexive}
+
+Reflexivity means more than adding a disclaimer about bias. It requires
+studying how the inquiry's own categories and procedures change the target,
+the evidence, or the community. In social science, a classification can
+become an incentive. In medicine, a diagnostic label can affect treatment. In
+physics, a detector design defines which events are accessible. In all cases,
+the inquiry should ask what it has made visible and what it has excluded.
+
+A reflexive epistemology is not self-defeating. The fact that an inquiry has
+conditions does not imply that its conclusions are only about those conditions.
+It means that a conclusion earns broader authority when it survives changes to
+the conditions that are not supposed to matter.
+
+\section*{Chapter summary}
+
+\RCR\ treats evidence as a claim-relative constraint, not as a free-floating
+fact. Its ten inferential rules require scope, traceability, alternatives,
+risk, invariance, causal separation, transport discipline, proportional
+commitment, revision readiness, and social accountability. Theory comparison
+uses a profile of fit, novelty, coherence, robustness, reach, simplicity, and
+process objectivity. The criteria of objectivity are graded, field-sensitive,
+and designed to make error discoverable.
+
+\begin{discussion}
+\begin{enumerate}
+\item Should a theory with stronger fit but weaker causal explanation be
+preferred for prediction?
+\item Which of the ten rules is most difficult to satisfy in social science?
+\item Can explicit values improve theory comparison rather than bias it?
+\end{enumerate}
+\end{discussion}
+
+\begin{furtherreading}
+Compare the updating logic here with Bayes (1763), Reichenbach (1938), Mayo
+(1996), and the causal frameworks of Pearl (2009) and Woodward (2003).
+\end{furtherreading}
+
